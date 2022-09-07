@@ -3,12 +3,8 @@ name: Test workflow
 on:
   pull_request:
     types: [opened, reopened, synchronize, labeled, unlabeled]
-    paths:
-      - src/tests/**
   pull_request_target:
     types: [closed]
-    paths:
-      - src/tests/**
 
 jobs:
 
@@ -24,8 +20,6 @@ jobs:
         uses: tj-actions/changed-files@v29.0.3
         id: changes
         with:
-          files:
-            'src/tests/**'
           dir_names: 'true'
           json: 'true'
 
