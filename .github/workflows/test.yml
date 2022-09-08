@@ -17,7 +17,7 @@ jobs:
           fetch-depth: 0
 
       - name: changes
-        uses: tj-actions/changed-files@fix/bug-with-similar-commits-when-github-event-before-is-empty
+        uses: tj-actions/changed-files@d0e5182f780c2e1cb473f1e85a8a91912c47ea08
         id: changes
         with:
           since_last_remote_commit: 'true'
