@@ -24,8 +24,6 @@ jobs:
           dir_names: 'true'
           json: 'true'
 
-      - name: output
-        env:
-          TEST: '${{ steps.changes.outputs.all_changed_files }}'
+      - name: Show output
         run: |
-          echo "$TEST"
+          echo '${{ steps.changes.outputs.all_changed_files }}'
